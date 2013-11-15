@@ -194,6 +194,10 @@ class RestActionReader
         $collection->add($routeName, new Route(
             $pattern.'.{_format}', $defaults, $requirements, $options
         ));
+
+        $collection->add($routeName.'_slash', new Route(                        
+            $pattern.'/', $defaults, $requirements, $options                    
+        )); 
     }
 
     /**
